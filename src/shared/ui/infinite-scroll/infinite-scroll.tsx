@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef, ReactNode } from "react";
 import styles from "./infinite-scroll.module.scss";
 
 interface InfiniteScrollProps {
   onLoadMore: () => void;
-  isLoading: boolean; 
+  isLoading: boolean;
   hasMore?: boolean;
-  children: ReactNode; 
+  children: ReactNode;
 }
 
 export const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
@@ -31,13 +31,15 @@ export const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
     }
 
     const observer = observerRef.current;
-    if (triggerRef.current) {
-      observer.observe(triggerRef.current);
+    const triggerElement = triggerRef.current; // Store the ref value in a variable
+    
+    if (triggerElement) {
+      observer.observe(triggerElement); // Use the stored element
     }
 
     return () => {
-      if (triggerRef.current) {
-        observer.unobserve(triggerRef.current);
+      if (triggerElement) {
+        observer.unobserve(triggerElement);
       }
     };
   }, [isLoading, hasMore, onLoadMore]);

@@ -1,14 +1,7 @@
 import { FavoriteIcon } from "@/shared/ui";
 import styles from "./add-to-favorites.module.scss";
 import { useFavoriteStore } from "@/shared/store";
-
-interface Cat {
-    id: string;
-    url: string;
-    width: number;
-    height: number;
-    breeds: any[]; 
-}
+import type { Cat } from "@/shared/types";
 
 interface FavoriteToggleProps {
   cat: Cat;

@@ -7,14 +7,7 @@ import styles from "./main-cats.grid.module.scss";
 import { fetchCats } from "@/shared/api";
 import { InfiniteScroll } from "@/shared/ui";
 import { AddToFavorites } from "@/features/add-to-favorites";
-
-interface Cat {
-    id: string;
-    url: string;
-    width: number;
-    height: number;
-    breeds: any[]; 
-  }
+import { Cat } from "@/shared/types";
 
 
 export const MainCatsGrid = () => {

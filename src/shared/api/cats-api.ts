@@ -1,3 +1,4 @@
+import type { Cat } from "../types";
 import axios from "axios";
 
 const API_URL = "https://api.thecatapi.com/v1";
@@ -9,16 +10,7 @@ export const theCatApi = axios.create({
   },
 });
 
-export interface CatImage {
-  id: string;
-  url: string;
-  width: number;
-  height: number;
-  breeds: any[]; 
-  favourite: object; 
-}
-
-export const fetchCats = async (page: number, limit: number = 10): Promise<CatImage[]> => {
+export const fetchCats = async (page: number, limit: number = 10): Promise<Cat[]> => {
   try {
     const response = await theCatApi.get(`/images/search`, {
       params: { limit, page },
