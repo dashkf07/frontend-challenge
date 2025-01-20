@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./Header.module.scss";
+import styles from './header.module.scss'
 
 export const Header = () => {
   const pathname = usePathname();
 
+  
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>

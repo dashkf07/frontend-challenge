@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { CatCard } from "@/entities/cat";
-import styles from "./main-cats.grid.module.scss";
+import styles from "./main-cats-grid.module.scss";
 import { fetchCats } from "@/shared/api";
 import { InfiniteScroll } from "@/shared/ui";
 import { AddToFavorites } from "@/features/add-to-favorites";
@@ -27,7 +26,7 @@ export const MainCatsGrid = () => {
         setPage((prev) => prev + 1);
       }
     } catch (error) {
-      console.error("error while loading cats:", error);
+      console.error("Error while loading cats:", error);
     } finally {
       setLoading(false);
     }

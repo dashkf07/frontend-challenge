@@ -1,4 +1,5 @@
-import "./globals.css";
+
+import "./global.scss";
 import { Header } from "@/shared/ui";
 
 export default function RootLayout({

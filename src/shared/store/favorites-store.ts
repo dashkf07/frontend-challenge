@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Cat } from "../types";
+import { Cat } from "../types";
 
 interface FavoriteStore {
   favoriteCats: Cat[];
@@ -23,6 +23,6 @@ export const useFavoriteStore = create<FavoriteStore>()(
     }),
     {
       name: "favorite-cats-storage",
-    },
-  ),
+    }
+  )
 );

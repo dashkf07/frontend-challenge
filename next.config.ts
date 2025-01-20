@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import { Configuration } from 'webpack';
+
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -15,7 +17,10 @@ module.exports = {
     ],
     unoptimized: true,
   },
-  basePath: '/frontend-challeng',
+  basePath: '/frontend-challenge',
+  assetPrefix:'/frontend-challenge',
+  output: 'export',
+  reactStrictMode: true
 };
 
 export default nextConfig;
