@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  max-width: 225px;
+  height: 225px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 9px 18px 0px #0000002E;
+    box-shadow: 0px 6px 5px 0px #0000003D;
+
+  }
+}
+
+.image {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.action {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0s 0.1s, opacity 0.3s ease;
+}
+
+.card:hover .action {
+  visibility: visible;
+  opacity: 1; 
+}
+
+
+

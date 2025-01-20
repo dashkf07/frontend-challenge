@@ -12,7 +12,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
+        <div style={{width: '90%', margin: 'auto'}}>
         {children}
+        </div>
       </body>
     </html>
   );

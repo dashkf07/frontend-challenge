@@ -1,5 +1,11 @@
+import { MainCatsGrid } from "@/widgets/main-cats-grid";
+
 export default function Home() {
   return (
-   <p>main page</p>
+    <main>
+      <p>main page</p>
+      <MainCatsGrid/>
+    </main>
+   
   );
 }

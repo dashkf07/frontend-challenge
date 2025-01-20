@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 50px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.noMore {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 20px;
+}

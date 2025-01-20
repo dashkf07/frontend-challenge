@@ -1,0 +1,2 @@
+export { MainCatsGrid } from "./ui";
+
