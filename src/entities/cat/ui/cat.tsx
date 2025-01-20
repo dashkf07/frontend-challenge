@@ -11,12 +11,12 @@ export interface CatCardProps {
 export const CatCard: React.FC<CatCardProps> = ({ cat, action }) => {
   return (
     <div className={styles.card}>
-       <Image
+      <Image
         className={styles.image}
-        src={cat.url}       
-        alt="Cat"            
-        width={225}          
-        height={225}          
+        src={cat.url}
+        alt="Cat"
+        width={225}
+        height={225}
       />
       {action && <div className={styles.action}>{action}</div>}
     </div>

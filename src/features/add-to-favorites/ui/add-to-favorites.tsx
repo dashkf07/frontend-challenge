@@ -21,11 +21,8 @@ export const AddToFavorites: React.FC<FavoriteToggleProps> = ({ cat }) => {
   };
 
   return (
-    <button
-      className={styles.button}
-      onClick={toggleFavorite}
-    >
-      <FavoriteIcon isFavorite={isFavorite}/>
+    <button className={styles.button} onClick={toggleFavorite}>
+      <FavoriteIcon isFavorite={isFavorite} />
     </button>
   );
 };

@@ -32,7 +32,7 @@ export const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
 
     const observer = observerRef.current;
     const triggerElement = triggerRef.current; // Store the ref value in a variable
-    
+
     if (triggerElement) {
       observer.observe(triggerElement); // Use the stored element
     }
@@ -47,7 +47,9 @@ export const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
   return (
     <div className={styles.wrapper}>
       {children}
-      {!isLoading && hasMore && <div ref={triggerRef} className={styles.trigger} />}
+      {!isLoading && hasMore && (
+        <div ref={triggerRef} className={styles.trigger} />
+      )}
     </div>
   );
 };

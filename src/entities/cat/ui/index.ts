@@ -1,2 +1,1 @@
 export { CatCard } from "./cat";
-

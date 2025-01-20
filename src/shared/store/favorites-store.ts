@@ -23,6 +23,6 @@ export const useFavoriteStore = create<FavoriteStore>()(
     }),
     {
       name: "favorite-cats-storage",
-    }
-  )
+    },
+  ),
 );
