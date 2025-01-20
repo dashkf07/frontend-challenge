@@ -4,5 +4,4 @@ export interface Cat {
     width: number;
     height: number;
     breeds: any[]; 
-    favourite: object; 
   }

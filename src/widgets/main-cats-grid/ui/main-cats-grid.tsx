@@ -14,12 +14,8 @@ interface Cat {
     width: number;
     height: number;
     breeds: any[]; 
-    favourite: object; 
   }
 
-interface CatGridProps {
-  cats: Cat[];
-}
 
 export const MainCatsGrid = () => {
     const [cats, setCats] = useState<Cat[]>([]); 
@@ -52,7 +48,7 @@ export const MainCatsGrid = () => {
             <CatCard key={cat.id} cat={cat} action={<AddToFavorites cat={cat}/>}/> 
           ))}
         </div>
-        {loading && <p className={styles.loading}>загрузка...</p>}
+        {loading && <p className={styles.loading}>...загружаем еще котиков...</p>}
         {!hasMore && <p className={styles.noMore}>больше котиков нет :(</p>}
       </InfiniteScroll>)
 };

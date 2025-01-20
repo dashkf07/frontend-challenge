@@ -1,0 +1,1 @@
+export { FavoritesCatsGrid } from "./ui";
