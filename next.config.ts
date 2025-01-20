@@ -13,7 +13,9 @@ module.exports = {
         hostname: '*',          
       },
     ],
+    unoptimized: true,
   },
+  basePath: '/frontend-challeng',
 };
 
 export default nextConfig;
